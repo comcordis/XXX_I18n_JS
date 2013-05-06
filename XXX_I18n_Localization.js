@@ -29,7 +29,7 @@ var XXX_I18n_Localization =
 		{
 			result = XXX_I18n_Localizations[this.selectedLocalization][tempArguments[0]];
 			
-			if (result !== '')
+			if (XXX_Type.isArray(result))
 			{
 				exists = true;
 				
@@ -45,10 +45,6 @@ var XXX_I18n_Localization =
 							exists = false;
 							
 							break;
-						}
-						else
-						{
-							exists = true;
 						}
 					}
 				}
@@ -67,7 +63,7 @@ var XXX_I18n_Localization =
 				
 				this.selectedLocalization = 'us';
 				
-				this.get(tempArguments);
+				result = this.get(tempArguments);
 				
 				this.selectedLocalization = previousSelectedLocalization;
 			}

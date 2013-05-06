@@ -28,7 +28,7 @@ var XXX_I18n_Translation =
 		{
 			result = XXX_I18n_Translations[this.selectedTranslation][tempArguments[0]];
 			
-			if (result !== '')
+			if (XXX_Type.isArray(result))
 			{
 				exists = true;
 				
@@ -44,10 +44,6 @@ var XXX_I18n_Translation =
 							exists = false;
 							
 							break;
-						}
-						else
-						{
-							exists = true;
 						}
 					}
 				}
@@ -66,7 +62,7 @@ var XXX_I18n_Translation =
 				
 				this.selectedTranslation = 'en';
 				
-				this.get(tempArguments);
+				result = this.get(tempArguments);
 				
 				this.selectedTranslation = previousSelectedTranslation;
 			}
