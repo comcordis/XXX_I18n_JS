@@ -39,7 +39,7 @@ var XXX_I18n_Translation =
 					{
 						result = result[tempArguments[i]];
 						
-						if (result === '')
+						if (!XXX_Type.isValue(result))
 						{
 							exists = false;
 							

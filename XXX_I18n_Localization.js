@@ -40,7 +40,7 @@ var XXX_I18n_Localization =
 					{
 						result = result[tempArguments[i]];
 						
-						if (result === '')
+						if (!XXX_Type.isValue(result))
 						{
 							exists = false;
 							
